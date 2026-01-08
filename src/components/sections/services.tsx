@@ -63,7 +63,7 @@ export function Services() {
       <img
         src="https://files.catbox.moe/ondkam.png"
         alt="Gato espiando do canto"
-        className="absolute bottom-0 right-0 w-40 md:w-64 h-auto z-20 pointer-events-none transform -scale-x-100"
+        className="absolute bottom-0 right-0 w-56 md:w-96 h-auto z-20 pointer-events-none transform -scale-x-100"
       />
 
       <div className="relative container mx-auto px-4 z-10">
