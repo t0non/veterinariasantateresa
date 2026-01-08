@@ -95,7 +95,7 @@ export function Services() {
                 className="group relative bg-background/90 backdrop-blur-sm p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-visible border-b-4 border-transparent hover:border-accent"
               >
                 <div className="relative z-10 transition-transform duration-500 md:group-hover:-translate-y-2">
-                   <div className="mb-5 bg-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto group-hover:bg-accent/80 transition-colors">
+                   <div className="mb-5 bg-gradient-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto transition-colors">
                     {React.cloneElement(service.icon, { className: 'text-accent-foreground' })}
                   </div>
                   <h3 className="text-xl font-bold text-primary text-center mb-3 font-headline">{service.title}</h3>
