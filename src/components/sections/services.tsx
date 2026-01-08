@@ -52,7 +52,7 @@ export function Services() {
       className="relative w-full py-16 sm:py-24 overflow-hidden"
     >
        <div 
-        className="absolute inset-0 z-0 bg-white"
+        className="absolute inset-0 z-0 bg-primary"
       ></div>
 
       <img
@@ -63,8 +63,8 @@ export function Services() {
 
       <div className="relative container mx-auto px-4 z-10">
         <div className="text-center mb-12 pt-12">
-          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline mb-4">Nossos Serviços</h2>
-          <p className="text-lg text-primary/80 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl font-headline mb-4">Nossos Serviços</h2>
+          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
             Cuidado profissional com muito amor e a melhor estrutura tecnológica.
           </p>
         </div>
