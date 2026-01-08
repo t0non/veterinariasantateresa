@@ -48,7 +48,7 @@ export function Services() {
             const isDog = petImage.includes('z7tmya');
             
             const finalPositionStyle = {
-                transform: `translate(-50%, ${isDog ? '-80%' : '-100%'})`
+                transform: isDog ? 'translate(-50%, -88%)' : 'translate(-50%, -100%)'
             };
 
 
