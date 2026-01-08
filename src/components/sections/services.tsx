@@ -58,9 +58,9 @@ export function Services() {
                 alt="Pet espiando"
                 className="absolute w-28 h-auto object-contain
                            top-0 left-1/2 transform -translate-x-1/2
-                           z-30 opacity-0 -translate-y-[calc(100%_-_20px)]
+                           z-30 opacity-0 -translate-y-[calc(100%_-_40px)]
                            transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
-                           group-hover:opacity-100 group-hover:-translate-y-[100%]
+                           group-hover:opacity-100 group-hover:-translate-y-[calc(100%_+_10px)]
                            pointer-events-none"
               />
               
