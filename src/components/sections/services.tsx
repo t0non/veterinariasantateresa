@@ -59,11 +59,11 @@ export function Services() {
               <img 
                 src={dogPopupImage}
                 alt="Cachorro espiando"
-                className="absolute w-28 h-auto object-contain 
-                           top-0 left-1/2 transform -translate-x-1/2 
-                           z-30 opacity-0 -translate-y-full 
-                           transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] 
-                           group-hover:opacity-100 group-hover:-translate-y-[15%] 
+                className="absolute w-28 h-auto object-contain
+                           top-0 left-1/2 transform -translate-x-1/2
+                           z-30 opacity-0 -translate-y-[80%] /* Começa invisível e acima */
+                           transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
+                           group-hover:opacity-100 group-hover:-translate-y-[100%] /* Move para cima ao passar o mouse */
                            pointer-events-none"
               />
               
