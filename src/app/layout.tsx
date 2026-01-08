@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
-import { FloatingWhatsApp } from '@/components/floating-whatsapp';
 import { PawPrintTrail } from '@/components/paw-print-trail';
+import { SmartChatWidget } from '@/components/smart-chat-widget';
 
 export const metadata: Metadata = {
   title: 'Veterinária Santa Tereza | Cuidado e Amor para seu Pet',
@@ -29,7 +29,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <FloatingWhatsApp />
+        <SmartChatWidget />
         <Toaster />
       </body>
     </html>
