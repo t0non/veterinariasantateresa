@@ -16,6 +16,7 @@ const servicesList = [
 const popupImages = [
   "https://files.catbox.moe/4kbiwn.png",
   "https://files.catbox.moe/j0tw0i.png",
+  "https://files.catbox.moe/z7tmya.png",
 ];
 
 export function Services() {
