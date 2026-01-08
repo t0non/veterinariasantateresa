@@ -18,7 +18,7 @@ export function Hero() {
           priority
         />
       )}
-      <div className="absolute inset-0 bg-primary/70" />
+      <div className="absolute inset-0 bg-black/30" />
       <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 text-center md:px-6">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-headline">
           Cuidado e Amor que seu melhor amigo merece na Santa Tereza.
