@@ -45,11 +45,10 @@ export function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {servicesList.map((service, index) => {
             const petImage = popupImages[index % popupImages.length];
-            const isDog = petImage.includes('z7tmya'); // Dog image identifier
+            const isDog = petImage.includes('z7tmya');
             
-            // Adjust dog's final position to compensate for empty space in the image.
             const finalPositionStyle = {
-                transform: `translate(-50%, ${isDog ? '-90%' : '-100%'})`
+                transform: `translate(-50%, ${isDog ? '-80%' : '-100%'})`
             };
 
 
