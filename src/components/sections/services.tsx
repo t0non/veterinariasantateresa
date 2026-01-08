@@ -28,8 +28,14 @@ export function Services() {
         className="absolute inset-0 z-0 bg-yellow-400"
       ></div>
 
+      <img
+        src="https://files.catbox.moe/ondkam.png"
+        alt="Gato espiando do canto"
+        className="absolute bottom-0 left-0 w-32 md:w-40 h-auto z-20 pointer-events-none"
+      />
+
       <div className="relative container mx-auto px-4 z-10">
-        <div className="text-center mb-24 pt-12">
+        <div className="text-center mb-12 pt-12">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline mb-4">Nossos Serviços</h2>
           <p className="text-lg text-primary/80 max-w-2xl mx-auto">
             Cuidado profissional com muito amor e a melhor estrutura tecnológica.
@@ -59,7 +65,7 @@ export function Services() {
                            top-0 left-1/2 transform -translate-x-1/2
                            z-20 opacity-0 -translate-y-[calc(100%_-_40px)]
                            transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
-                           group-hover:opacity-100 group-hover:-translate-y-[calc(100%_-_20px)]
+                           group-hover:opacity-100 group-hover:-translate-y-[calc(100%_-_30px)]
                            pointer-events-none"
               />
               
