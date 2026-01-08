@@ -31,7 +31,7 @@ export function Services() {
       <img
         src="https://files.catbox.moe/ondkam.png"
         alt="Gato espiando do canto"
-        className="absolute bottom-0 right-0 w-80 md:w-96 h-auto z-20 pointer-events-none transform -scale-x-100"
+        className="absolute bottom-0 right-0 w-32 md:w-48 h-auto z-20 pointer-events-none transform -scale-x-100"
       />
 
       <div className="relative container mx-auto px-4 z-10">
@@ -45,7 +45,13 @@ export function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {servicesList.map((service, index) => {
             const petImage = popupImages[index % popupImages.length];
-            const finalPositionStyle = { transform: 'translate(-50%, -100%)' };
+            const isDog = petImage.includes('z7tmya'); // Dog image identifier
+            
+            // Adjust dog's final position to compensate for empty space in the image.
+            const finalPositionStyle = {
+                transform: `translate(-50%, ${isDog ? '-90%' : '-100%'})`
+            };
+
 
             return (
               <div 
