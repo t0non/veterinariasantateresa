@@ -4,21 +4,32 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
   const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta.";
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-vet-pet');
+  const heroImageDesktop = PlaceHolderImages.find(p => p.id === 'hero-vet-pet');
+  const heroImageMobile = PlaceHolderImages.find(p => p.id === 'hero-vet-pet-mobile');
 
   return (
     <section id="inicio" className="relative h-[90vh] min-h-[600px] w-full text-white">
-      {heroImage && (
+      {heroImageDesktop && (
         <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
+          src={heroImageDesktop.imageUrl}
+          alt={heroImageDesktop.description}
           fill
-          className="object-cover"
-          data-ai-hint={heroImage.imageHint}
+          className="hidden md:block object-cover"
+          data-ai-hint={heroImageDesktop.imageHint}
           priority
         />
       )}
-      <div className="absolute inset-0 bg-black/30" />
+      {heroImageMobile && (
+        <Image
+          src={heroImageMobile.imageUrl}
+          alt={heroImageMobile.description}
+          fill
+          className="md:hidden object-cover"
+          data-ai-hint={heroImageMobile.imageHint}
+          priority
+        />
+      )}
+      <div className="absolute inset-0 bg-primary/70" />
       <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 text-center md:px-6">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-headline">
           Cuidado e Amor que seu melhor amigo merece na Santa Tereza.
