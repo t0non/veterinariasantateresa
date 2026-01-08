@@ -9,7 +9,7 @@ export function WhoWeAre() {
     <section id="quem-somos" className="py-16 sm:py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative w-full h-80 md:h-full rounded-lg overflow-hidden md:-ml-32">
+          <div className="relative w-full h-80 md:h-full rounded-lg overflow-hidden md:-ml-48">
             {whoWeAreImage && (
                 <Image
                 src={whoWeAreImage.imageUrl}
