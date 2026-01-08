@@ -3,13 +3,18 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function WhoWeAre() {
-  const whoWeAreImage = PlaceHolderImages.find(p => p.id === 'who-we-are-facade');
   
   return (
-    <section id="quem-somos" className="py-16 sm:py-24 bg-background overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="quem-somos" className="relative py-16 sm:py-24 bg-background overflow-hidden">
+        <img
+            src="https://files.catbox.moe/6p2fi4.png"
+            alt="Elemento decorativo de onda"
+            className="absolute top-0 left-0 w-full transform -scale-y-100"
+            style={{ zIndex: 1 }}
+        />
+      <div className="relative container mx-auto px-4 md:px-6" style={{ zIndex: 2 }}>
         <div className="grid gap-12 items-center">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-left">
             <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
               Quem Somos??
             </h2>
