@@ -1,25 +1,43 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { X, Send, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function SmartChatWidget() {
   const [stage, setStage] = useState('hidden'); // hidden -> typing -> bubble -> open
   const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState<string[]>([]);
+  const chatBodyRef = useRef<HTMLDivElement>(null);
 
   const avatarUrl = "https://files.catbox.moe/ee41fg.png"; 
   const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta.";
 
-
   useEffect(() => {
-    const timer1 = setTimeout(() => setStage('typing'), 2000);
-    const timer2 = setTimeout(() => setStage('bubble'), 5500);
+    if (isOpen) return;
+    
+    const timers = [
+      setTimeout(() => setStage('typing'), 2000), // Start typing animation
+      setTimeout(() => {
+        setStage('bubble');
+        setMessages(['Olá! Tudo bem? 👋']);
+      }, 4000), // Show first message
+      setTimeout(() => setStage('typing'), 5500), // Start typing again
+      setTimeout(() => {
+        setStage('bubble');
+        setMessages(prev => [...prev, 'Quer receber um orçamento rápido ou agendar uma consulta?']);
+      }, 7500), // Show second message
+    ];
 
     return () => {
-      clearTimeout(timer1);
-      clearTimeout(timer2);
+      timers.forEach(clearTimeout);
     };
-  }, []);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (chatBodyRef.current) {
+      chatBodyRef.current.scrollTop = chatBodyRef.current.scrollHeight;
+    }
+  }, [messages, isOpen]);
 
   const handleOpen = () => {
     setIsOpen(true);
@@ -29,7 +47,10 @@ export function SmartChatWidget() {
   const handleClose = (e?: React.MouseEvent) => {
     e?.stopPropagation();
     setIsOpen(false);
-    setStage('bubble');
+    setMessages([]);
+    setStage('hidden'); // Reset to initial state
+    // Restart animation sequence after a delay
+    setTimeout(() => setStage('typing'), 2000);
   };
 
   const handleToggle = () => {
@@ -40,27 +61,34 @@ export function SmartChatWidget() {
     }
   }
 
+  const TypingIndicator = () => (
+    <div className="bg-background px-4 py-3 rounded-t-2xl rounded-bl-2xl shadow-lg border animate-in fade-in slide-in-from-bottom-5">
+      <div className="flex items-center gap-1">
+        <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+        <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+        <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></span>
+      </div>
+    </div>
+  );
+  
+  const ChatBubble = ({ text }: { text: string }) => (
+     <div className="bg-background text-primary px-5 py-3 rounded-2xl rounded-br-sm shadow-xl border cursor-pointer hover:scale-105 transition-transform duration-300 flex items-center gap-2 max-w-[280px] animate-in fade-in slide-in-from-bottom-5">
+        <span className="text-sm font-medium">{text}</span>
+      </div>
+  )
+
   return (
     <div className="fixed bottom-5 right-5 z-[9999] flex flex-col items-end gap-3 font-body">
       
-      {stage === 'typing' && !isOpen && (
-        <div className="bg-background px-4 py-3 rounded-t-2xl rounded-bl-2xl shadow-lg border animate-in fade-in slide-in-from-bottom-5">
-          <div className="flex items-center gap-1">
-            <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-            <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-            <span className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></span>
-          </div>
+      {!isOpen && stage !== 'hidden' && (
+        <div onClick={handleOpen} className="flex flex-col items-end gap-2 cursor-pointer">
+          {messages.map((msg, index) => (
+            <ChatBubble key={index} text={msg} />
+          ))}
+          {stage === 'typing' && <TypingIndicator />}
         </div>
       )}
 
-      {stage === 'bubble' && !isOpen && (
-        <div 
-          onClick={handleOpen}
-          className="bg-background text-primary px-5 py-3 rounded-2xl rounded-br-sm shadow-xl border cursor-pointer hover:scale-105 transition-transform duration-300 flex items-center gap-2 max-w-[250px] animate-in fade-in slide-in-from-bottom-5"
-        >
-          <span className="text-sm font-medium">E aí, vamos agendar uma consulta para seu pet? 🐶</span>
-        </div>
-      )}
 
       {isOpen && (
         <div className="bg-background rounded-2xl shadow-2xl w-[320px] overflow-hidden animate-in fade-in slide-in-from-bottom-10 duration-300 border">
@@ -88,13 +116,16 @@ export function SmartChatWidget() {
             </div>
           </div>
 
-          <div className="p-6 bg-secondary/50">
-            <div className="bg-background p-4 rounded-xl rounded-tl-none shadow-sm text-foreground text-sm mb-4 border">
-              Olá! Tudo bem? 👋 <br/>
-              Quer receber um orçamento rápido ou agendar uma consulta?
-            </div>
-            
-            <Button
+          <div ref={chatBodyRef} className="p-6 bg-secondary/50 h-[180px] overflow-y-auto flex flex-col gap-3">
+             {messages.map((msg, index) => (
+                <div key={index} className="bg-background p-4 rounded-xl rounded-tl-none shadow-sm text-foreground text-sm border self-start">
+                  {msg.split('<br/>').map((line, i) => <p key={i}>{line}</p>)}
+                </div>
+              ))}
+          </div>
+
+          <div className="p-4 border-t bg-background">
+             <Button
               asChild
               className="w-full rounded-full bg-gradient-accent text-accent-foreground font-bold py-3 transition-all transform hover:-translate-y-1"
               size="lg"
@@ -103,6 +134,7 @@ export function SmartChatWidget() {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="group"
               >
                 Sim, eu quero! 
                 <Send size={18} className="group-hover:translate-x-1 transition-transform"/>
@@ -127,7 +159,7 @@ export function SmartChatWidget() {
         
         <span className="absolute bottom-1 right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full animate-pulse"></span>
         
-        {!isOpen && (
+        {(!isOpen && stage === 'bubble' && messages.length > 0) && (
            <div className="absolute -bottom-1 -right-1 bg-primary text-primary-foreground p-1.5 rounded-full border-2 border-white">
              <MessageCircle size={14} fill="currentColor" />
            </div>
