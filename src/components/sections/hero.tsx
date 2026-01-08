@@ -9,26 +9,28 @@ export function Hero() {
 
   return (
     <section id="inicio" className="relative h-[90vh] min-h-[600px] w-full text-white">
-      {heroImageDesktop && (
-        <Image
-          src={heroImageDesktop.imageUrl}
-          alt={heroImageDesktop.description}
-          fill
-          className="hidden md:block object-cover"
-          data-ai-hint={heroImageDesktop.imageHint}
-          priority
-        />
-      )}
-      {heroImageMobile && (
-        <Image
-          src={heroImageMobile.imageUrl}
-          alt={heroImageMobile.description}
-          fill
-          className="md:hidden object-cover"
-          data-ai-hint={heroImageMobile.imageHint}
-          priority
-        />
-      )}
+      <div data-paw-container className="absolute inset-0 overflow-hidden">
+        {heroImageDesktop && (
+          <Image
+            src={heroImageDesktop.imageUrl}
+            alt={heroImageDesktop.description}
+            fill
+            className="hidden md:block object-cover"
+            data-ai-hint={heroImageDesktop.imageHint}
+            priority
+          />
+        )}
+        {heroImageMobile && (
+          <Image
+            src={heroImageMobile.imageUrl}
+            alt={heroImageMobile.description}
+            fill
+            className="md:hidden object-cover"
+            data-ai-hint={heroImageMobile.imageHint}
+            priority
+          />
+        )}
+      </div>
       
       <div className="container relative z-10 mx-auto flex h-full flex-col items-center justify-center px-4 text-center md:px-6">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl font-headline">

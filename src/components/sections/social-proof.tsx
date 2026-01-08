@@ -26,8 +26,9 @@ const testimonials = [
 
 export function SocialProof() {
   return (
-    <section id="depoimentos" className="py-16 sm:py-24 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="depoimentos" className="relative py-16 sm:py-24 bg-primary text-primary-foreground">
+      <div data-paw-container className="absolute inset-0 bg-primary opacity-5" />
+      <div className="container relative z-10 mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline">Quem ama, recomenda</h2>
           <p className="mt-4 text-lg text-primary-foreground/80">
