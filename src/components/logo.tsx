@@ -1,14 +1,18 @@
-import { PawPrint } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 export function Logo({ className }: { className?: string }) {
   return (
     <Link href="/" className={cn("flex items-center gap-2", className)}>
-      <PawPrint className="h-8 w-8 text-accent" />
-      <span className="text-xl font-bold tracking-tight text-primary">
-        Veterinária Santa Tereza
-      </span>
+      <Image 
+        src="https://files.catbox.moe/bsfpti.png" 
+        alt="Veterinária Santa Tereza Logo" 
+        width={200} 
+        height={50} 
+        className="h-auto"
+        priority
+      />
     </Link>
   );
 }
