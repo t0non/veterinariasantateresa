@@ -4,6 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { FloatingWhatsApp } from '@/components/floating-whatsapp';
+import { PawPrintTrail } from '@/components/paw-print-trail';
 
 export const metadata: Metadata = {
   title: 'Veterinária Santa Tereza | Cuidado e Amor para seu Pet',
@@ -24,6 +25,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
+        <PawPrintTrail />
         <Header />
         <main>{children}</main>
         <Footer />
