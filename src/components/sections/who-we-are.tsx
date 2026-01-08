@@ -9,7 +9,7 @@ export function WhoWeAre() {
         <img
             src="https://files.catbox.moe/6p2fi4.png"
             alt="Elemento decorativo de onda"
-            className="absolute top-0 left-0 w-full transform -scale-y-100"
+            className="absolute top-0 left-0 w-full h-12 object-cover transform -scale-y-100"
             style={{ zIndex: 1 }}
         />
       <div className="relative container mx-auto px-4 md:px-6" style={{ zIndex: 2 }}>
