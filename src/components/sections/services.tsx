@@ -1,5 +1,7 @@
+import Image from 'next/image';
 import { Stethoscope, Scissors, Syringe, FlaskConical, MoveRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const services = [
   {
@@ -27,9 +29,19 @@ const services = [
 const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os.";
 
 export function Services() {
+    const backgroundImage = PlaceHolderImages.find(p => p.id === 'services-background');
   return (
-    <section id="servicos" className="py-16 sm:py-24 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="servicos" className="relative py-16 sm:py-24 bg-background">
+     {backgroundImage && (
+        <Image
+            src={backgroundImage.imageUrl}
+            alt={backgroundImage.description}
+            fill
+            className="absolute inset-0 object-cover w-full h-full opacity-10"
+            data-ai-hint={backgroundImage.imageHint}
+        />
+     )}
+      <div className="container relative z-10 mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">Nossos Serviços</h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -38,7 +50,7 @@ export function Services() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
-            <Card key={service.title} className="group flex flex-col items-center text-center border-2 border-transparent shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-accent hover:shadow-2xl">
+            <Card key={service.title} className="group flex flex-col items-center text-center border-2 bg-background/80 border-transparent shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-accent hover:shadow-2xl">
               <CardHeader>
                 {service.icon}
                 <CardTitle className="mt-4 text-primary font-headline">{service.title}</CardTitle>
