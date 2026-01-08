@@ -82,3 +82,23 @@
     box-shadow: 0 0 0 1rem hsl(var(--primary) / 0);
   }
 }
+
+.bg-gradient-primary {
+    background-image: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary) / 0.8), hsl(var(--primary)));
+    background-size: 200% auto;
+    transition: background-position 0.5s;
+}
+
+.bg-gradient-primary:hover {
+    background-position: right center;
+}
+
+.bg-gradient-accent {
+    background-image: linear-gradient(to right, hsl(var(--accent)), hsl(var(--accent) / 0.8), hsl(var(--accent)));
+    background-size: 200% auto;
+    transition: background-position 0.5s;
+}
+
+.bg-gradient-accent:hover {
+    background-position: right center;
+}

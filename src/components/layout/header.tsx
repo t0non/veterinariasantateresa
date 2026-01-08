@@ -52,7 +52,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild className="hidden bg-accent text-accent-foreground hover:bg-accent/90 md:flex">
+          <Button asChild className="hidden bg-accent text-accent-foreground bg-gradient-accent md:flex">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               Falar com Veterinário Agora
             </a>
@@ -83,7 +83,7 @@ export function Header() {
                       </SheetClose>
                     ))}
                   </div>
-                  <Button asChild className="mt-4 w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Button asChild className="mt-4 w-full bg-accent text-accent-foreground bg-gradient-accent">
                     <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                       Falar com Veterinário Agora
                     </a>

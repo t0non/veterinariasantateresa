@@ -41,7 +41,7 @@ export function Footer() {
                 </div>
               </div>
             </div>
-            <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild size="lg" className="mt-8 bg-accent text-accent-foreground bg-gradient-accent">
               <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+dos+Animais+Felizes,123,Cidade" target="_blank" rel="noopener noreferrer">
                 Traçar rota agora
               </a>

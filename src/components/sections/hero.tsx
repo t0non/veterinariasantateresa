@@ -40,7 +40,7 @@ export function Hero() {
         <Button
           asChild
           size="lg"
-          className="mt-8 animate-pulse-blue rounded-full bg-accent px-12 py-8 text-xl font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105 hover:bg-accent/90"
+          className="mt-8 animate-pulse-blue rounded-full bg-accent px-12 py-8 text-xl font-bold text-accent-foreground shadow-lg transition-transform hover:scale-105 bg-gradient-accent"
         >
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
             Agendar Consulta pelo WhatsApp
