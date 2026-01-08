@@ -71,9 +71,17 @@
   .animate-pulse-blue {
     animation: pulse-blue 2s infinite;
   }
-
-  .animate-paw-fade-in {
-    animation: paw-fade-in 1.5s ease-in-out forwards;
+  
+  .paw-print {
+    position: fixed; /* Fica fixo na tela enquanto você rola */
+    bottom: -50px; /* Começa fora da tela */
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    pointer-events: none; /* Permite clicar nos botões através da patinha */
+    z-index: 9999; /* Garante que fique ACIMA de tudo */
+    fill: hsl(var(--primary)); /* Cor AZUL MARINHO da sua marca */
+    animation: pawWalk 2s ease-out forwards;
   }
 }
 
@@ -87,16 +95,18 @@
   }
 }
 
-@keyframes paw-fade-in {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
+/* Animação do movimento da patinha */
+@keyframes pawWalk {
+  0% {
+    opacity: 0.6;
+    transform: translateY(0) scale(1) rotate(0deg);
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
+  100% {
+    opacity: 0;
+    transform: translateY(-150px) scale(1.5) rotate(10deg); /* Sobe e desaparece */
   }
 }
+
 
 .bg-gradient-primary {
     background-image: linear-gradient(to right, hsl(var(--primary)), hsl(var(--primary) / 0.8), hsl(var(--primary)));
