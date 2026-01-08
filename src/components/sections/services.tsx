@@ -31,7 +31,7 @@ export function Services() {
       <img
         src="https://files.catbox.moe/ondkam.png"
         alt="Gato espiando do canto"
-        className="absolute bottom-0 right-0 w-64 md:w-80 h-auto z-20 pointer-events-none transform -scale-x-100"
+        className="absolute bottom-0 right-0 w-80 md:w-96 h-auto z-20 pointer-events-none transform -scale-x-100"
       />
 
       <div className="relative container mx-auto px-4 z-10">
@@ -45,14 +45,18 @@ export function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {servicesList.map((service, index) => {
             const petImage = popupImages[index % popupImages.length];
+            const isDog = petImage.includes('z7tmya');
             const isCat = petImage.includes('j0tw0i');
-            const isHamster = petImage.includes('4kbiwn');
             
-            const finalPositionStyle = isCat
-              ? { transform: 'translate(-50%, calc(-100% + 20px))' }
-              : isHamster
-              ? { transform: 'translate(-50%, calc(-100% + 20px))' }
-              : { transform: 'translate(-50%, calc(-100% + 10px))' };
+            let finalPositionStyle = {};
+            if (isDog) {
+              finalPositionStyle = { transform: 'translate(-50%, calc(-100% + 25px))' };
+            } else if (isCat) {
+              finalPositionStyle = { transform: 'translate(-50%, calc(-100% - 5px))' };
+            } else { // Hamster
+              finalPositionStyle = { transform: 'translate(-50%, calc(-100% - 10px))' };
+            }
+
 
             return (
               <div 
