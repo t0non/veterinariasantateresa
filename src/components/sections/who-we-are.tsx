@@ -8,7 +8,7 @@ export function WhoWeAre() {
             Quem Somos
           </h2>
           <p className="mt-6 text-lg leading-8 text-muted-foreground">
-            Desde 2008, a Veterinária Santa Tereza tem sido referência em cuidados veterinários em Belo Horizonte e região leste. Localizada na Rua Gabro, 87, no bairro Santa Tereza, nossa clínica se destaca por proporcionar um atendimento ágil e especializado, sempre focado no bem-estar dos pets.
+            <span className="bg-accent/30 px-2 py-1 rounded-md">Desde 2008</span>, a Veterinária Santa Tereza tem sido <span className="bg-accent/30 px-2 py-1 rounded-md">referência</span> em cuidados veterinários em Belo Horizonte e região leste. Localizada na Rua Gabro, 87, no bairro Santa Tereza, nossa clínica se destaca por proporcionar um atendimento ágil e especializado, sempre focado no bem-estar dos pets.
           </p>
         </div>
       </div>
