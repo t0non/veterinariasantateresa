@@ -33,14 +33,14 @@ export function Services() {
       <div className="absolute inset-0 bg-primary/90 z-0"></div>
 
       <div className="relative container mx-auto px-4 z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline mb-4">Nossos Serviços</h2>
           <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
             Cuidado profissional com muito amor e a melhor estrutura tecnológica.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-12">
           {servicesList.map((service, index) => (
             <div 
               key={index}
