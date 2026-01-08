@@ -59,6 +59,12 @@
       "description": "Cachorro em fundo branco",
       "imageUrl": "https://files.catbox.moe/oy9c84.png",
       "imageHint": "dog"
+    },
+    {
+      "id": "who-we-are-facade",
+      "description": "Fachada da clínica Veterinária Santa Tereza",
+      "imageUrl": "https://files.catbox.moe/w8r11r.png",
+      "imageHint": "clinic facade"
     }
   ]
 }
