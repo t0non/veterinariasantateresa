@@ -97,26 +97,27 @@ export function Services() {
               <div 
                 key={index}
                 ref={el => cardsRef.current[index] = el}
-                className="group relative bg-background/90 backdrop-blur-sm p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-visible border-b-4 border-transparent hover:border-accent"
+                className="group relative transition-all duration-500 isolate"
               >
-                <div className="relative z-10 transition-transform duration-500 md:group-hover:-translate-y-2">
-                   <div className="mb-5 bg-gradient-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto transition-colors">
-                    {React.cloneElement(service.icon, { className: 'text-accent-foreground' })}
-                  </div>
-                  <h3 className="text-xl font-bold text-primary text-center mb-3 font-headline">{service.title}</h3>
-                  <p className="text-muted-foreground text-center text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-
                 <img 
                   src={petImage}
                   alt="Pet espiando"
-                  className="pet-image absolute w-28 h-auto object-contain top-0 left-1/2 z-0 opacity-0 pointer-events-none md:group-hover:opacity-100 md:transition-all md:duration-500 md:ease-[cubic-bezier(0.34,1.56,0.64,1)] md:group-hover:-translate-y-full"
+                  className="pet-image absolute w-28 h-auto object-contain top-0 left-1/2 z-0 pointer-events-none
+                  opacity-0
+                  md:group-hover:opacity-100 md:transition-all md:duration-500 md:ease-[cubic-bezier(0.34,1.56,0.64,1)] md:group-hover:-translate-y-full"
                   style={{ ...finalPositionStyle, ...animationVars }}
                 />
-                
-                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500 z-0"></div>
+
+                <div className="relative z-10 bg-background/90 backdrop-blur-sm p-8 rounded-3xl shadow-md hover:shadow-2xl h-full flex flex-col border-b-4 border-transparent hover:border-accent">
+                   <div className="mb-5 bg-gradient-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto transition-colors">
+                    {React.cloneElement(service.icon, { className: 'text-accent-foreground' })}
+                  </div>
+                  <h3 className="text-xl font-bold text-primary text-center mb-3 font-headline flex-grow">{service.title}</h3>
+                  <p className="text-muted-foreground text-center text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                  <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500 -z-10"></div>
+                </div>
               </div>
             )
           })}
