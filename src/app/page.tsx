@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <Hero />
       <Services />
-      <SocialProof />
       <About />
+      <SocialProof />
       <WhoWeAre />
     </>
   );
