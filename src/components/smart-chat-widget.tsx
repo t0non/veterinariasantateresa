@@ -160,7 +160,7 @@ export function SmartChatWidget() {
         <span className="absolute bottom-1 right-1 w-4 h-4 bg-green-500 border-2 border-white rounded-full animate-pulse"></span>
         
         {(!isOpen && stage === 'bubble' && messages.length > 0) && (
-           <div className="absolute -bottom-1 -right-1 bg-primary text-primary-foreground p-1.5 rounded-full border-2 border-white">
+           <div className="absolute -bottom-1 -right-1 bg-green-500 text-primary-foreground p-1.5 rounded-full border-2 border-white">
              <MessageCircle size={14} fill="currentColor" />
            </div>
         )}
