@@ -57,7 +57,7 @@ export function Services() {
        <div 
         className="absolute inset-0 z-0 bg-primary"
       ></div>
-      <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.30)_0%,transparent_70%)]"></div>
+      <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.20)_0%,transparent_70%)]"></div>
 
 
       <img
