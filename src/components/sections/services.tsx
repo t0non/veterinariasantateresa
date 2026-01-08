@@ -63,7 +63,7 @@ export function Services() {
       <img
         src="https://files.catbox.moe/ondkam.png"
         alt="Gato espiando do canto"
-        className="absolute bottom-0 left-0 w-56 md:w-96 h-auto z-20 pointer-events-none"
+        className="absolute bottom-0 left-0 w-48 md:w-80 h-auto z-20 pointer-events-none -scale-x-100"
       />
 
       <div className="relative container mx-auto px-4 z-10">
@@ -102,7 +102,7 @@ export function Services() {
                 <img 
                   src={petImage}
                   alt="Pet espiando"
-                  className="pet-image absolute w-28 h-auto object-contain top-0 left-1/2 z-0 pointer-events-none
+                  className="pet-image absolute w-28 h-auto object-contain top-0 left-1/2 z-[-1] pointer-events-none
                   opacity-0
                   md:group-hover:opacity-100 md:transition-all md:duration-500 md:ease-[cubic-bezier(0.34,1.56,0.64,1)] md:group-hover:-translate-y-full"
                   style={{ ...finalPositionStyle, ...animationVars }}
