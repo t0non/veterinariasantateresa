@@ -48,11 +48,15 @@ export function Services() {
             const isDog = petImage.includes('z7tmya');
             const isHamster = petImage.includes('4kbiwn');
             
-            const finalPositionStyle = isDog 
-                ? { transform: 'translate(-50%, -73%)' }
+            const dogPosition = { transform: 'translate(-50%, -73%)' };
+            const hamsterPosition = { transform: 'translate(-65%, -100%)' };
+            const catPosition = { transform: 'translate(-50%, -100%)' };
+
+            const finalPositionStyle = isDog
+                ? dogPosition
                 : isHamster
-                ? { transform: 'translate(-65%, -100%)' }
-                : { transform: 'translate(-50%, -100%)' };
+                ? hamsterPosition
+                : catPosition;
 
 
             return (
