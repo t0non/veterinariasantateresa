@@ -46,9 +46,10 @@ export function Services() {
           {servicesList.map((service, index) => {
             const petImage = popupImages[index % popupImages.length];
             const isDog = petImage.includes('z7tmya');
+            const isHamster = petImage.includes('4kbiwn');
             
             const finalPositionStyle = {
-                transform: isDog ? 'translate(-50%, -73%)' : 'translate(-50%, -100%)'
+                transform: isDog ? 'translate(-50%, -73%)' : isHamster ? 'translate(-50%, -100%)' : 'translate(-50%, -100%)'
             };
 
 
