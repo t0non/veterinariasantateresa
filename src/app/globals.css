@@ -102,3 +102,26 @@
 .bg-gradient-accent:hover {
     background-position: right center;
 }
+
+@keyframes peek-mobile {
+  0% {
+    opacity: 0;
+    transform: var(--transform-start);
+  }
+  20% {
+    opacity: 1;
+    transform: var(--transform-peek);
+  }
+  70% {
+    opacity: 1;
+    transform: var(--transform-peek);
+  }
+  100% {
+    opacity: 0;
+    transform: var(--transform-end);
+  }
+}
+
+.animate-peek {
+  animation: peek-mobile 2.5s ease-in-out forwards;
+}
