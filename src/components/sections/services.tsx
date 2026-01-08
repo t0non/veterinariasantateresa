@@ -1,28 +1,43 @@
 import Image from 'next/image';
-import { Stethoscope, Scissors, Syringe, FlaskConical, MoveRight } from 'lucide-react';
+import { Stethoscope, Scissors, Syringe, FlaskConical, MoveRight, Home, Pill, FileScan, Bath } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const services = [
   {
     icon: <Stethoscope className="h-10 w-10 text-primary" />,
-    title: 'Consultas',
-    description: 'Atendimento clínico completo para o diagnóstico e tratamento do seu pet.',
+    title: 'Consultas Veterinárias',
+    description: 'Atendimento para cães, gatos e animais silvestres.',
+  },
+  {
+    icon: <FileScan className="h-10 w-10 text-primary" />,
+    title: 'Exames de Hemograma e Raio-X',
+    description: 'Diagnósticos rápidos com equipamentos internos.',
   },
   {
     icon: <Scissors className="h-10 w-10 text-primary" />,
     title: 'Cirurgias',
-    description: 'Realizamos procedimentos cirúrgicos com máxima segurança e tecnologia.',
+    description: 'Procedimentos realizados com segurança e cuidado.',
+  },
+  {
+    icon: <Home className="h-10 w-10 text-primary" />,
+    title: 'Atendimento a Domicílio',
+    description: 'Conforto e praticidade para você e seu pet.',
   },
   {
     icon: <Syringe className="h-10 w-10 text-primary" />,
-    title: 'Vacinação',
-    description: 'Proteja seu melhor amigo com nosso programa de imunização completo.',
+    title: 'Vacinas e Internação',
+    description: 'Proteção e cuidado contínuo.',
   },
   {
-    icon: <FlaskConical className="h-10 w-10 text-primary" />,
-    title: 'Exames Laboratoriais',
-    description: 'Resultados rápidos e precisos para um diagnóstico eficiente.',
+    icon: <Bath className="h-10 w-10 text-primary" />,
+    title: 'Banho e Tosa',
+    description: 'Para manter seu pet limpo e bem tratado.',
+  },
+  {
+    icon: <Pill className="h-10 w-10 text-primary" />,
+    title: 'Venda de Medicamentos',
+    description: 'Produtos de qualidade para tratamento e prevenção.',
   },
 ];
 
