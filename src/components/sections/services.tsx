@@ -50,9 +50,9 @@ export function Services() {
             
             let finalPositionStyle = {};
             if (isDog) {
-              finalPositionStyle = { transform: 'translate(-50%, calc(-100% + 25px))' };
+              finalPositionStyle = { transform: 'translate(-50%, calc(-100% + 28px))' };
             } else if (isCat) {
-              finalPositionStyle = { transform: 'translate(-50%, calc(-100% - 5px))' };
+              finalPositionStyle = { transform: 'translate(-50%, calc(-100% - 10px))' };
             } else { // Hamster
               finalPositionStyle = { transform: 'translate(-50%, calc(-100% - 10px))' };
             }
@@ -64,7 +64,7 @@ export function Services() {
                 className="group relative bg-background/90 backdrop-blur-sm p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-visible border-b-4 border-transparent hover:border-accent"
               >
                 <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
-                   <div className="mb-5 bg-secondary w-16 h-16 rounded-full flex items-center justify-center mx-auto group-hover:bg-accent/20 transition-colors">
+                   <div className="mb-5 bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto group-hover:bg-accent/20 transition-colors">
                     {React.cloneElement(service.icon, { className: 'text-primary' })}
                   </div>
                   <h3 className="text-xl font-bold text-primary text-center mb-3 font-headline">{service.title}</h3>
