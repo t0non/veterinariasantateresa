@@ -50,11 +50,11 @@ export function Services() {
             
             let finalPositionStyle = {};
             if (isDog) {
-              finalPositionStyle = { transform: 'translate(-50%, calc(-100% + 28px))' };
+              finalPositionStyle = { transform: 'translate(-50%, calc(-100% + 35px))' };
             } else if (isCat) {
-              finalPositionStyle = { transform: 'translate(-50%, calc(-100% - 10px))' };
+              finalPositionStyle = { transform: 'translate(-50%, calc(-100% + 30px))' };
             } else { // Hamster
-              finalPositionStyle = { transform: 'translate(-50%, calc(-100% - 10px))' };
+              finalPositionStyle = { transform: 'translate(-50%, calc(-100% + 30px))' };
             }
 
 
