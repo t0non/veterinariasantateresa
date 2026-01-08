@@ -111,7 +111,7 @@ export function Services() {
                   style={{ ...finalPositionStyle, ...animationVars }}
                 />
                 
-                 <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500 z-0"></div>
+                 <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500 z-0"></div>
               </div>
             )
           })}
