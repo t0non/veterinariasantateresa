@@ -12,7 +12,7 @@ const servicesList = [
     { title: "Microchipagem", icon: <CirclePlus size={32} className="text-primary"/>, description: "Identificação segura para seu animal." },
 ];
 
-const dogPopupImage = "https://files.catbox.moe/bsjtzp.png";
+const dogPopupImage = "https://files.catbox.moe/z7tmya.png";
 
 export function Services() {
   return (
