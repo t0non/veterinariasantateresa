@@ -31,7 +31,7 @@ export function Services() {
       <img
         src="https://files.catbox.moe/ondkam.png"
         alt="Gato espiando do canto"
-        className="absolute bottom-0 left-0 w-64 md:w-80 h-auto z-20 pointer-events-none"
+        className="absolute bottom-0 right-0 w-64 md:w-80 h-auto z-20 pointer-events-none transform -scale-x-100"
       />
 
       <div className="relative container mx-auto px-4 z-10">
@@ -47,9 +47,10 @@ export function Services() {
             const petImage = popupImages[index % popupImages.length];
             const isCat = petImage.includes('j0tw0i');
             const isHamster = petImage.includes('4kbiwn');
-            const isDog = petImage.includes('z7tmya');
-
-            const finalPosition = isCat || isHamster ? 'group-hover:-translate-y-[calc(100%_-_25px)]' : 'group-hover:-translate-y-[calc(100%_-_30px)]';
+            
+            const finalPositionStyle = isCat || isHamster 
+              ? { transform: 'translate(-50%, calc(-100% + 25px))' }
+              : { transform: 'translate(-50%, calc(-100% + 30px))' };
 
             return (
               <div 
@@ -70,12 +71,12 @@ export function Services() {
                   src={petImage}
                   alt="Pet espiando"
                   className={`absolute w-28 h-auto object-contain
-                             top-0 left-1/2 transform -translate-x-1/2
-                             z-20 opacity-0 -translate-y-[calc(100%_-_40px)]
+                             top-0 left-1/2 
+                             z-20 opacity-0 -translate-y-full
                              transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
                              group-hover:opacity-100 
-                             ${finalPosition}
                              pointer-events-none`}
+                  style={finalPositionStyle}
                 />
                 
                  <div className="absolute inset-0 bg-accent opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500 z-0"></div>
