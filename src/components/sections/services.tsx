@@ -31,7 +31,7 @@ export function Services() {
       <img
         src="https://files.catbox.moe/ondkam.png"
         alt="Gato espiando do canto"
-        className="absolute bottom-0 left-0 w-48 md:w-64 h-auto z-20 pointer-events-none"
+        className="absolute bottom-0 left-0 w-64 md:w-80 h-auto z-20 pointer-events-none"
       />
 
       <div className="relative container mx-auto px-4 z-10">
@@ -47,6 +47,9 @@ export function Services() {
             const petImage = popupImages[index % popupImages.length];
             const isCat = petImage.includes('j0tw0i');
             const isHamster = petImage.includes('4kbiwn');
+            const isDog = petImage.includes('z7tmya');
+
+            const finalPosition = isCat || isHamster ? 'group-hover:-translate-y-[calc(100%_-_25px)]' : 'group-hover:-translate-y-[calc(100%_-_30px)]';
 
             return (
               <div 
@@ -68,10 +71,10 @@ export function Services() {
                   alt="Pet espiando"
                   className={`absolute w-28 h-auto object-contain
                              top-0 left-1/2 transform -translate-x-1/2
-                             z-0 opacity-0 -translate-y-[calc(100%_-_40px)]
+                             z-20 opacity-0 -translate-y-[calc(100%_-_40px)]
                              transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
                              group-hover:opacity-100 
-                             ${isCat || isHamster ? 'group-hover:-translate-y-[calc(100%_-_20px)]' : 'group-hover:-translate-y-[calc(100%_-_30px)]'}
+                             ${finalPosition}
                              pointer-events-none`}
                 />
                 
