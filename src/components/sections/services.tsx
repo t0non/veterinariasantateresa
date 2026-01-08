@@ -49,7 +49,7 @@ export function Services() {
             const isHamster = petImage.includes('4kbiwn');
             
             const finalPositionStyle = isCat || isHamster 
-              ? { transform: 'translate(-50%, calc(-100% + 25px))' }
+              ? { transform: 'translate(-50%, calc(-100% + 15px))' }
               : { transform: 'translate(-50%, calc(-100% + 30px))' };
 
             return (
