@@ -30,7 +30,7 @@ export function Services() {
           opacity: 1
         }}
       ></div>
-      <div className="absolute inset-0 bg-primary/80 z-0"></div>
+      <div className="absolute inset-0 bg-primary/90 z-0"></div>
 
       <div className="relative container mx-auto px-4 z-10">
         <div className="text-center mb-16">
