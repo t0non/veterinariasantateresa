@@ -2,14 +2,14 @@ import React from 'react';
 import { Stethoscope, Scissors, Syringe, Activity, HeartPulse, Home, Bone, CirclePlus } from 'lucide-react';
 
 const servicesList = [
-    { title: "Consultas Veterinárias", icon: <Stethoscope size={32} className="text-primary-foreground"/>, description: "Atendimento para cães, gatos e animais silvestres." },
-    { title: "Cirurgias", icon: <Scissors size={32} className="text-primary-foreground"/>, description: "Procedimentos realizados com segurança e cuidado." },
-    { title: "Vacinas e Internação", icon: <Syringe size={32} className="text-primary-foreground"/>, description: "Proteção e cuidado contínuo." },
-    { title: "Exames de Hemograma e Raio-X", icon: <Activity size={32} className="text-primary-foreground"/>, description: "Diagnósticos rápidos com equipamentos internos." },
-    { title: "Atendimento a Domicílio", icon: <Home size={32} className="text-primary-foreground"/>, description: "Conforto e praticidade para você e seu pet." },
-    { title: "Banho e Tosa", icon: <Bone size={32} className="text-primary-foreground"/>, description: "Para manter seu pet limpo e bem tratado." },
-    { title: "Venda de Medicamentos", icon: <HeartPulse size={32} className="text-primary-foreground"/>, description: "Produtos de qualidade para tratamento e prevenção." },
-    { title: "Microchipagem", icon: <CirclePlus size={32} className="text-primary-foreground"/>, description: "Identificação segura para seu animal." },
+    { title: "Consultas Veterinárias", icon: <Stethoscope size={32} />, description: "Atendimento para cães, gatos e animais silvestres." },
+    { title: "Cirurgias", icon: <Scissors size={32} />, description: "Procedimentos realizados com segurança e cuidado." },
+    { title: "Vacinas e Internação", icon: <Syringe size={32} />, description: "Proteção e cuidado contínuo." },
+    { title: "Exames de Hemograma e Raio-X", icon: <Activity size={32} />, description: "Diagnósticos rápidos com equipamentos internos." },
+    { title: "Atendimento a Domicílio", icon: <Home size={32} />, description: "Conforto e praticidade para você e seu pet." },
+    { title: "Banho e Tosa", icon: <Bone size={32} />, description: "Para manter seu pet limpo e bem tratado." },
+    { title: "Venda de Medicamentos", icon: <HeartPulse size={32} />, description: "Produtos de qualidade para tratamento e prevenção." },
+    { title: "Microchipagem", icon: <CirclePlus size={32} />, description: "Identificação segura para seu animal." },
 ];
 
 const dogPopupImage = "https://files.catbox.moe/z7tmya.png";
@@ -18,7 +18,7 @@ export function Services() {
   return (
     <section 
       id="servicos" 
-      className="relative w-full py-16 sm:py-24 bg-primary text-primary-foreground overflow-hidden"
+      className="relative w-full py-16 sm:py-24 overflow-hidden"
     >
        <div 
         className="absolute inset-0 z-0"
@@ -27,15 +27,13 @@ export function Services() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 1
         }}
       ></div>
-      <div className="absolute inset-0 bg-primary/80 z-0"></div>
 
       <div className="relative container mx-auto px-4 z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-headline mb-4">Nossos Serviços</h2>
-          <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline mb-4">Nossos Serviços</h2>
+          <p className="text-lg text-primary/80 max-w-2xl mx-auto">
             Cuidado profissional com muito amor e a melhor estrutura tecnológica.
           </p>
         </div>
