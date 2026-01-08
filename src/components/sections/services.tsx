@@ -57,7 +57,7 @@ export function Services() {
        <div 
         className="absolute inset-0 z-0 bg-primary"
       ></div>
-      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.15)_0%,_transparent_70%)]"></div>
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.30)_0%,_transparent_70%)]"></div>
 
 
       <img
