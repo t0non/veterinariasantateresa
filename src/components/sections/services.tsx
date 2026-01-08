@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Stethoscope, Scissors, Syringe, Activity, HeartPulse, Home, Bone, CirclePlus } from 'lucide-react';
 
@@ -14,9 +13,9 @@ const servicesList = [
 ];
 
 const popupImages = [
-  "https://files.catbox.moe/4kbiwn.png",
-  "https://files.catbox.moe/j0tw0i.png",
-  "https://files.catbox.moe/z7tmya.png",
+  "https://files.catbox.moe/4kbiwn.png", // hamster
+  "https://files.catbox.moe/j0tw0i.png", // cat
+  "https://files.catbox.moe/z7tmya.png", // dog
 ];
 
 export function Services() {
@@ -30,7 +29,7 @@ export function Services() {
       ></div>
 
       <div className="relative container mx-auto px-4 z-10">
-        <div className="text-center mb-12 pt-12">
+        <div className="text-center mb-24 pt-12">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline mb-4">Nossos Serviços</h2>
           <p className="text-lg text-primary/80 max-w-2xl mx-auto">
             Cuidado profissional com muito amor e a melhor estrutura tecnológica.
@@ -43,7 +42,7 @@ export function Services() {
               key={index}
               className="group relative bg-background/90 backdrop-blur-sm p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-visible border-b-4 border-transparent hover:border-accent"
             >
-              <div className="relative z-20 transition-transform duration-500 group-hover:-translate-y-2">
+              <div className="relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
                  <div className="mb-5 bg-secondary w-16 h-16 rounded-full flex items-center justify-center mx-auto group-hover:bg-accent/20 transition-colors">
                   {React.cloneElement(service.icon, { className: 'text-primary' })}
                 </div>
@@ -58,9 +57,9 @@ export function Services() {
                 alt="Pet espiando"
                 className="absolute w-28 h-auto object-contain
                            top-0 left-1/2 transform -translate-x-1/2
-                           z-30 opacity-0 -translate-y-[calc(100%_-_40px)]
+                           z-20 opacity-0 -translate-y-[calc(100%_-_40px)]
                            transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
-                           group-hover:opacity-100 group-hover:-translate-y-[calc(100%_+_10px)]
+                           group-hover:opacity-100 group-hover:-translate-y-[calc(100%_-_20px)]
                            pointer-events-none"
               />
               
