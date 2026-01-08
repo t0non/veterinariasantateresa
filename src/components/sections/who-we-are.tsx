@@ -8,20 +8,8 @@ export function WhoWeAre() {
   return (
     <section id="quem-somos" className="py-16 sm:py-24 bg-background overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative w-full h-80 md:h-full rounded-lg overflow-hidden">
-            {whoWeAreImage && (
-                <Image
-                src={whoWeAreImage.imageUrl}
-                alt={whoWeAreImage.description}
-                width={600}
-                height={450}
-                className="w-full h-full object-cover"
-                data-ai-hint={whoWeAreImage.imageHint}
-                />
-            )}
-          </div>
-          <div>
+        <div className="grid gap-12 items-center">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
               Quem Somos??
             </h2>
