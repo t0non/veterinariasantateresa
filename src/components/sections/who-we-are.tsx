@@ -1,3 +1,4 @@
+'use client';
 
 import Image from 'next/image';
 
@@ -32,6 +33,9 @@ export function WhoWeAre() {
         height={192}
         className="absolute bottom-0 right-4 w-32 md:w-48 z-20 pointer-events-none"
         style={{ filter: 'drop-shadow(0 10px 8px rgba(0, 0, 0, 0.2))' }}
+        onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+          (e.target as HTMLImageElement).style.display = 'none';
+        }}
       />
     </section>
   );
