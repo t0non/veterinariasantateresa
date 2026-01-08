@@ -82,7 +82,7 @@ export function SmartChatWidget() {
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-primary rounded-full"></span>
               </div>
               <div>
-                <h3 className="font-bold text-lg leading-tight">Santa Tereza</h3>
+                <h3 className="font-bold text-lg leading-tight">Dra. Daniela Lage</h3>
                 <p className="text-xs text-primary-foreground/80">Online agora</p>
               </div>
             </div>
