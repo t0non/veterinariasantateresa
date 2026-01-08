@@ -7,7 +7,7 @@ export function WhoWeAre() {
     <section id="quem-somos" className="relative py-16 sm:py-24 bg-background overflow-hidden">
       <div className="relative container mx-auto px-4 md:px-6" style={{ zIndex: 2 }}>
         <div className="grid gap-12 items-center">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-left">
             <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
               Quem Somos?
             </h2>
@@ -18,9 +18,9 @@ export function WhoWeAre() {
               <Image
                 src="https://files.catbox.moe/8bhvmu.png"
                 alt="Fachada da clínica Veterinária Santa Tereza"
-                width={720}
-                height={480}
-                className="rounded-lg shadow-lg mx-auto"
+                width={540}
+                height={360}
+                className="rounded-lg mx-auto"
               />
             </div>
           </div>
