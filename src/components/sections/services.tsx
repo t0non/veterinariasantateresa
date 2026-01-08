@@ -45,18 +45,7 @@ export function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {servicesList.map((service, index) => {
             const petImage = popupImages[index % popupImages.length];
-            const isDog = petImage.includes('z7tmya');
-            const isCat = petImage.includes('j0tw0i');
-            
-            let finalPositionStyle = {};
-            if (isDog) {
-              finalPositionStyle = { transform: 'translate(-50%, calc(-100% + 35px))' };
-            } else if (isCat) {
-              finalPositionStyle = { transform: 'translate(-50%, calc(-100% + 30px))' };
-            } else { // Hamster
-              finalPositionStyle = { transform: 'translate(-50%, calc(-100% + 30px))' };
-            }
-
+            const finalPositionStyle = { transform: 'translate(-50%, -100%)' };
 
             return (
               <div 
