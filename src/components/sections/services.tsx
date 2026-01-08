@@ -13,9 +13,9 @@ const servicesList = [
 ];
 
 const popupImages = [
-  "https://files.catbox.moe/4kbiwn.png", // hamster
-  "https://files.catbox.moe/j0tw0i.png", // cat
   "https://files.catbox.moe/z7tmya.png", // dog
+  "https://files.catbox.moe/j0tw0i.png", // cat
+  "https://files.catbox.moe/4kbiwn.png", // hamster
 ];
 
 export function Services() {
@@ -49,9 +49,9 @@ export function Services() {
             const isHamster = petImage.includes('4kbiwn');
             
             const finalPositionStyle = isCat
-              ? { transform: 'translate(-50%, calc(-100% + 20px))' }
+              ? { transform: 'translate(-50%, calc(-100% + 50px))' }
               : isHamster
-              ? { transform: 'translate(-50%, calc(-100% + 20px))' }
+              ? { transform: 'translate(-50%, calc(-100% + 50px))' }
               : { transform: 'translate(-50%, calc(-100% + 30px))' };
 
             return (
