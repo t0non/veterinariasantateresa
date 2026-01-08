@@ -46,7 +46,7 @@ const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20d
 export function Services() {
     const backgroundImage = PlaceHolderImages.find(p => p.id === 'services-background');
   return (
-    <section id="servicos" className="relative py-16 sm:py-24 bg-secondary/30">
+    <section id="servicos" className="relative py-16 sm:py-24">
      {backgroundImage && (
         <Image
             src={backgroundImage.imageUrl}
