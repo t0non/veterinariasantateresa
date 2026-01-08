@@ -20,17 +20,17 @@ export function Services() {
       id="servicos" 
       className="relative w-full py-16 sm:py-24 bg-primary text-primary-foreground overflow-hidden"
     >
-       <div className="absolute inset-0 bg-primary/80 opacity-50 z-0"></div>
        <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('https://files.catbox.moe/oy9c84.png')",
+          backgroundImage: "url('https://files.catbox.moe/d3obln.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          opacity: 0.1
+          opacity: 1
         }}
       ></div>
+      <div className="absolute inset-0 bg-primary/80 z-0"></div>
 
       <div className="relative container mx-auto px-4 z-10">
         <div className="text-center mb-16">
