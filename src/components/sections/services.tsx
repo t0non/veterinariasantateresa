@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Stethoscope, Scissors, Syringe, Activity, HeartPulse, Home, Bone, CirclePlus } from 'lucide-react';
 
@@ -12,7 +13,10 @@ const servicesList = [
     { title: "Microchipagem", icon: <CirclePlus size={32} />, description: "Identificação segura para seu animal." },
 ];
 
-const dogPopupImage = "https://files.catbox.moe/z7tmya.png";
+const popupImages = [
+  "https://files.catbox.moe/4kbiwn.png",
+  "https://files.catbox.moe/j0tw0i.png",
+];
 
 export function Services() {
   return (
@@ -21,24 +25,18 @@ export function Services() {
       className="relative w-full py-16 sm:py-24 overflow-hidden"
     >
        <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('https://files.catbox.moe/d3obln.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
+        className="absolute inset-0 z-0 bg-yellow-400"
       ></div>
 
       <div className="relative container mx-auto px-4 z-10">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 pt-12">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline mb-4">Nossos Serviços</h2>
           <p className="text-lg text-primary/80 max-w-2xl mx-auto">
             Cuidado profissional com muito amor e a melhor estrutura tecnológica.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {servicesList.map((service, index) => (
             <div 
               key={index}
@@ -55,11 +53,11 @@ export function Services() {
               </div>
 
               <img 
-                src={dogPopupImage}
-                alt="Cachorro espiando"
+                src={popupImages[index % popupImages.length]}
+                alt="Pet espiando"
                 className="absolute w-28 h-auto object-contain
                            top-0 left-1/2 transform -translate-x-1/2
-                           z-30 opacity-0 -translate-y-full
+                           z-30 opacity-0 -translate-y-[calc(100%_-_20px)]
                            transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
                            group-hover:opacity-100 group-hover:-translate-y-[100%]
                            pointer-events-none"
