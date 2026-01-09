@@ -2,10 +2,10 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  devIndicators: {
+    position: 'bottom-right',
+  },
   experimental: {},
-  allowedDevOrigins: [
-    'https://6000-firebase-studio-1767892735188.cluster-j6d3cbsvdbe5uxnhqrfzzeyj7i.cloudworkstations.dev',
-  ],
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -35,6 +35,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'files.catbox.moe',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
         port: '',
         pathname: '/**',
       },

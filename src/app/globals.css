@@ -71,6 +71,9 @@
   .animate-pulse-blue {
     animation: pulse-blue 2s infinite;
   }
+  .animate-pulse-blue-gentle {
+    animation: pulse-blue-gentle 3s infinite;
+  }
 }
 
 @keyframes pulse-blue {
@@ -80,6 +83,16 @@
   }
   70% {
     box-shadow: 0 0 0 1rem hsl(var(--primary) / 0);
+  }
+}
+
+@keyframes pulse-blue-gentle {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 0.5rem hsl(var(--primary) / 0);
   }
 }
 

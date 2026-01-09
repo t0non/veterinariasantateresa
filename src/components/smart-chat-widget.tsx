@@ -10,7 +10,7 @@ export function SmartChatWidget() {
   const chatBodyRef = useRef<HTMLDivElement>(null);
 
   const avatarUrl = "https://files.catbox.moe/ee41fg.png"; 
-  const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta.";
+  const WHATSAPP_LINK = "https://wa.me/5511999999999?text=Ol%C3%A1,%20vi%20no%20Google%20e%20gostaria%20de%20agendar%20uma%20consulta.";
 
   useEffect(() => {
     if (isOpen) return;
@@ -24,7 +24,7 @@ export function SmartChatWidget() {
       setTimeout(() => setStage('typing'), 5500), // Start typing again
       setTimeout(() => {
         setStage('bubble');
-        setMessages(prev => [...prev, 'Quer receber um orçamento rápido ou agendar uma consulta?']);
+        setMessages(prev => [...prev, 'Olá! Seu pet precisa de atendimento agora ou quer agendar uma vacina?']);
       }, 7500), // Show second message
     ];
 
@@ -78,7 +78,7 @@ export function SmartChatWidget() {
   )
 
   return (
-    <div className="fixed bottom-5 right-5 z-[9999] flex flex-col items-end gap-3 font-body">
+    <div className="fixed bottom-24 md:bottom-5 right-5 z-[9999] flex flex-col items-end gap-3 font-body">
       
       {!isOpen && stage !== 'hidden' && (
         <div onClick={handleOpen} className="flex flex-col items-end gap-2 cursor-pointer">

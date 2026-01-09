@@ -8,9 +8,9 @@ export function Logo({ className }: { className?: string }) {
       <Image 
         src="https://files.catbox.moe/bsfpti.png" 
         alt="Veterinária Santa Tereza Logo" 
-        width={120} 
-        height={30} 
-        className="h-auto"
+        width={300} 
+        height={100} 
+        className="h-20 md:h-24 w-auto object-contain"
         priority
       />
     </Link>

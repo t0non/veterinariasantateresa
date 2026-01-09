@@ -3,67 +3,37 @@
     {
       "id": "hero-vet-pet",
       "description": "Veterinário sorrindo cuidando de um cachorro",
-      "imageUrl": "https://files.catbox.moe/r8remu.png",
+      "imageUrl": "/images/hero-vet-pet.png",
       "imageHint": "veterinarian pet"
     },
     {
       "id": "hero-vet-pet-mobile",
       "description": "Veterinário sorrindo cuidando de um cachorro em um banner vertical para celular",
-      "imageUrl": "https://files.catbox.moe/svehoo.png",
+      "imageUrl": "/images/hero-vet-pet-mobile.png",
       "imageHint": "veterinarian pet mobile"
-    },
-    {
-      "id": "pet-testimonial-1",
-      "description": "Cachorro feliz",
-      "imageUrl": "https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkb2d8ZW58MHx8fHwxNzY3ODE4OTgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dog"
-    },
-    {
-      "id": "pet-testimonial-2",
-      "description": "Gato",
-      "imageUrl": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjYXR8ZW58MHx8fHwxNzY3ODkzNDExfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cat"
-    },
-    {
-      "id": "pet-testimonial-3",
-      "description": "Cachorro feliz sorrindo",
-      "imageUrl": "https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxkb2clMjBoYXBweXxlbnwwfHx8fDE3Njc4OTM0MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dog happy"
     },
     {
       "id": "clinic-reception",
       "description": "Recepção de clínica veterinária limpa e organizada",
-      "imageUrl": "https://images.unsplash.com/photo-1742797359136-b34989b8f35d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xpbmljJTIwcmVjZXB0aW9ufGVufDB8fHx8MTc2Nzg3MTUyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/clinic-reception.jpg",
       "imageHint": "clinic reception"
     },
     {
       "id": "diverse-bird",
       "description": "Pássaro calopsita",
-      "imageUrl": "https://images.unsplash.com/photo-1550853024-fae8cd4be47f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxiaXJkfGVufDB8fHx8MTc2Nzg5MzQxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/diverse-bird.jpg",
       "imageHint": "bird"
     },
     {
       "id": "diverse-rabbit",
       "description": "Coelho fofo",
-      "imageUrl": "https://images.unsplash.com/photo-1591561582301-7ce6588cc286?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyYWJiaXR8ZW58MHx8fHwxNzY3ODkzNDEyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/diverse-rabbit.jpg",
       "imageHint": "rabbit"
-    },
-    {
-      "id": "map-location",
-      "description": "Mapa de uma cidade",
-      "imageUrl": "https://images.unsplash.com/photo-1446776899648-aa78eefe8ed0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc2Nzg1NTc0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "city map"
-    },
-    {
-      "id": "services-background",
-      "description": "Cachorro em fundo branco",
-      "imageUrl": "https://files.catbox.moe/oy9c84.png",
-      "imageHint": "dog"
     },
     {
       "id": "who-we-are-facade",
       "description": "Fachada da clínica Veterinária Santa Tereza",
-      "imageUrl": "https://files.catbox.moe/08l836.png",
+      "imageUrl": "/images/who-we-are-facade.png",
       "imageHint": "clinic facade"
     }
   ]
