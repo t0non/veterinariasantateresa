@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-vet-pet",
+      "description": "Veterinário sorrindo cuidando de um cachorro",
+      "imageUrl": "/images/hero-vet-pet.png",
+      "imageHint": "veterinarian pet"
+    },
+    {
+      "id": "hero-vet-pet-mobile",
+      "description": "Veterinário sorrindo cuidando de um cachorro em um banner vertical para celular",
+      "imageUrl": "/images/hero-vet-pet-mobile.png",
+      "imageHint": "veterinarian pet mobile"
+    },
+    {
+      "id": "clinic-reception",
+      "description": "Recepção de clínica veterinária limpa e organizada",
+      "imageUrl": "/images/clinic-reception.jpg",
+      "imageHint": "clinic reception"
+    },
+    {
+      "id": "diverse-bird",
+      "description": "Pássaro calopsita",
+      "imageUrl": "/images/diverse-bird.jpg",
+      "imageHint": "bird"
+    },
+    {
+      "id": "diverse-rabbit",
+      "description": "Coelho fofo",
+      "imageUrl": "/images/diverse-rabbit.jpg",
+      "imageHint": "rabbit"
+    }
+  ]
+}
